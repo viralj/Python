@@ -49,3 +49,26 @@ while close is not 50:
     close = int(input("Enter 50 to clear screen and ask your "
                       "friends to choose a number between 1 and {}: ".format(total_question)))
 clear()
+
+"""
+Real fun begins from here. User can ask friends to select a number
+and we will show what line was there.
+And then we will exit the program.
+"""
+a = 99
+while a is not 100:
+    a = int(input("Enter number between 1 and {} : ".format(total_question)))
+    if a is 0:
+        print("No zero please.")
+    elif a is 100:
+        break
+    elif a > total_question:
+        print("Not a valid number, please try again")
+    else:
+        print(text[a - 1])
+        print("To exit enter 100.")
+
+"""
+Program ends here.
+"""
+exit()
