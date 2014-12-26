@@ -21,6 +21,10 @@ clear = lambda: os.system('cls')    # A lambda function to clear screen
 total_question = int(input("How many funny lines you want to set up for your friends? "))
 text = []
 
+"""
+We want uses to choose not more then 10 lines so we can keep this
+small function.
+"""
 while int(total_question) > 10:
     print("Not more than 10 because it is easy to remember what you will enter.")
     print("")
