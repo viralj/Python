@@ -40,3 +40,12 @@ for i in range(total_question):
         print("Please enter something.")
         v = input("Enter sentence no {} : ".format(i+1))
     text.append(v)
+
+"""
+To clean screen.
+"""
+close = 0
+while close is not 50:
+    close = int(input("Enter 50 to clear screen and ask your "
+                      "friends to choose a number between 1 and {}: ".format(total_question)))
+clear()
