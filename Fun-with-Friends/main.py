@@ -29,3 +29,14 @@ while int(total_question) > 10:
     print("Not more than 10 because it is easy to remember what you will enter.")
     print("")
     total_question = int(input("How many funny lines you want to set up for your friends? "))
+
+"""
+According to entered range by user, we will ask to enter funny lines
+and we will store these lines into a dictionary.
+"""
+for i in range(total_question):
+    v = input("Enter sentence no {} : ".format(i+1))
+    while not v:
+        print("Please enter something.")
+        v = input("Enter sentence no {} : ".format(i+1))
+    text.append(v)
