@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="icon" type="image/png" href="/static/imgs/veeru_apps.png">
+    <title>Welcome to Veeru's official website. Find all mobile apps created by Veeru here.</title>
+    <style type="text/css">
+        .arrows {
+            width: 60px;
+            height: 80px;
+            position: fixed;
+            margin-left: 20px;
+            bottom: 20px;
+        }
+
+        .arrows path {
+            stroke: #2994D1;
+            fill: transparent;
+            stroke-width: 4px;
+            animation: arrow 2s infinite;
+            -webkit-animation: arrow 2s infinite;
+        }
+
+        @keyframes arrow
+        {
+        0% {opacity:0}
+        40% {opacity:1}
+        80% {opacity:0}
+        100% {opacity:0}
+        }
+
+        @-webkit-keyframes arrow /*Safari and Chrome*/
+        {
+        0% {opacity:0}
+        40% {opacity:1}
+        80% {opacity:0}
+        100% {opacity:0}
+        }
+
+        .arrows path.a1 {
+            animation-delay:-1s;
+            -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+        }
+
+        .arrows path.a2 {
+            animation-delay:-0.5s;
+            -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+        }
+
+        .arrows path.a3 {
+            animation-delay:0s;
+            -webkit-animation-delay:0s; /* Safari 和 Chrome */
+        }
+
+        nav{
+            background-color: white;
+        }
+        .brand-logo{
+            color: #000000 !important;
+            font-weight: 300 !important;
+            cursor: pointer;
+        }
+        code{
+            background-color: #efefef;
+            border: 1px #e0e0e0 solid;
+            padding:1px 5px;
+        }
+        .app-logo{
+            background-color: #26a69a;
+        }
+    </style>
+</head>
+<body class="grey lighten-3">
+
+
+<nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center" title="Veeru">Veeru</a>
+    </div>
+  </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12 l12">
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="col s12 m12 l12 center">
+                        <img src="/static/imgs/veeru.jpg" class="z-depth-2" width="200px">
+                    </div>
+                    <p>&nbsp;</p>
+                     <p>
+                         Hello, I am Viral Joshi, but you can call me Veeru. I am a programmer. Coding is my passion.
+                          I write codes because it is magical for me. Whenever I see my programs running, I always feel same thing.
+                          Everytime it's just like magic. I can make machine work for me.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        When I first wrote <code>Hello World!</code> I fell in love with programming at the same moment.
+                        I started learning different programming languages so I can talk to machines more and more.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                       I am an Information Systems Security major student.
+                        And I love to write codes for websites, desktop apps and mobile apps in my free time.
+                        Check out my apps collection below. Download for your mobile devices and start playing today.
+                    </p>
+                </div>
+
+          </div>
+
+        </div>
+
+        <div class="col s4 m4 l4" >
+            <div class="card">
+                <div class="card-image">
+                  <img src="/static/imgs/bit_icon.png" class="app-logo">
+                  <span class="card-title">BitTacToe</span>
+                </div>
+                <div class="card-content">
+                  <p>
+                      BitTacToe is new generation mobile game version of Tic Tac Toe.
+                  </p>
+                </div>
+                <div class="card-action">
+                  <a href="#btt_mdl" class="modal-trigger">Read more</a>
+                </div>
+              </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="btt_mdl" class="modal">
+    <div class="modal-content">
+        <h4>BitTacToe</h4>
+        <p>
+            BitTacToe is new approach of game Tic Tac Toe. You can play online with unknown opponent.
+            The new approch is that you will play with your <b>satoshi</b>. Every game requires both players to use satoshi.
+            And winner takes all.
+        </p>
+        <p>
+            After that you claim your satoshi and get bitcoins. Play this game to make bitcoins for free.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-green btn-flat">Got It</a>
+        <a href="#" class="waves-effect waves-green btn-flat">Download from PlayStore</a>
+        <a href="/BTT/About" class="waves-effect waves-green btn-flat">About/Terms</a>
+    </div>
+</div>
+
+<svg class="arrows">
+    <path class="a1" d="M0 0 L30 32 L60 0"></path>
+	<path class="a2" d="M0 20 L30 52 L60 20"></path>
+	<path class="a3" d="M0 40 L30 72 L60 40"></path>
+</svg>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        //modal function
+        $('.modal-trigger').leanModal();
+
+        //show page scroll after 2 seconds of page load
+        $('svg').hide();
+        setTimeout(function(){
+            if($(window).scrollTop() + $(window).height() != $(document).height()) {
+                $('svg').fadeIn('slow');
+            }
+        }, 2000);
+
+        //page scroll check
+         $(window).scroll(function() {
+             if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                 $('.arrows').fadeOut();
+             }else{
+                 $('.arrows').fadeIn();
+                 var scrolled=0;
+             }
+        });
+
+        //scrolling down
+        var scrolled=0;
+        $("svg").on("click" ,function(){
+            scrolled=scrolled+300;
+            $("body").animate({
+			    scrollTop:  scrolled
+            });
+
+        });
+
+    });
+</script>
+
+</body>
+</html>
